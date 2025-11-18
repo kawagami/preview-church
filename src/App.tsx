@@ -22,7 +22,7 @@ function App() {
           count is {count}
         </button>
         <p>
-          關掉 setting pages 設定的測試
+          關掉 setting pages 設定的測試 v2
         </p>
       </div>
       <p className="read-the-docs">
