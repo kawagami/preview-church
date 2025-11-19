@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import indeximage from './assets/indeximage.png'
+import indeximage from './assets/indeximage.webp'
 import viteLogo from '/vite.svg'
 import './App.css'
 
