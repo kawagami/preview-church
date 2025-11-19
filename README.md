@@ -1,75 +1,65 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 討論串
+* https://chatgpt.com/c/691d6499-f428-8332-b39f-c0f2bd60938c
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
-
-Note: This will impact Vite dev & build performances.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 架構
 ```
+src/
+├── app/                     # 頁面與路由 (若未用 router，可省略)
+│   ├── routes.tsx
+│   ├── Home/
+│   │   └── index.tsx
+│   └── About/
+│       └── index.tsx
+│
+├── components/              # 可重用的 UI 元件
+│   ├── Button/
+│   │   ├── index.tsx
+│   │   └── style.css
+│   └── Navbar/
+│       ├── index.tsx
+│       └── style.css
+│
+├── features/                # 功能模組 (若做中大型專案非常重要)
+│   ├── auth/
+│   │   ├── api.ts
+│   │   ├── hooks.ts
+│   │   └── store.ts
+│   └── users/
+│       ├── api.ts
+│       ├── hooks.ts
+│       └── store.ts
+│
+├── hooks/                   # 全域自定義 hooks
+│   ├── useDarkMode.ts
+│   ├── useFetch.ts
+│   └── ...
+│
+├── services/                # API 服務層 (axios、fetch 請放這裡)
+│   ├── http.ts              # axios instance
+│   └── userService.ts
+│
+├── store/                   # 全域狀態管理
+│   ├── index.ts
+│   └── userStore.ts
+│
+├── utils/                   # 工具函式、格式轉換
+│   ├── date.ts
+│   ├── math.ts
+│   └── string.ts
+│
+├── assets/                  # 靜態資源
+│   ├── images/
+│   └── fonts/
+│
+├── styles/                  # 全域樣式 (Tailwind, CSS variables)
+│   └── globals.css
+│
+├── types/                   # TS 型別定義
+│   ├── user.ts
+│   └── api.ts
+│
+└── main.tsx                 # App 入口
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
