@@ -5,13 +5,14 @@ on:
     branches: [ master ]
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  pages: write      # GitHub Pages 部署
+  id-token: write   # OIDC token
+  contents: read    # 讀取 repo
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -32,21 +33,21 @@ jobs:
       - name: Build
         run: pnpm build
 
-      # 📦 Upload build artifacts to GitHub Pages
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: dist
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      # 🚀 Deploy the build to GitHub Pages
-      - name: Deploy
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
