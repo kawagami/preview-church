@@ -1,5 +1,6 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { resolve } from 'path';
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -11,4 +12,13 @@ export default defineConfig({
       },
     }),
   ],
-})
+  build: {
+    rollupOptions: {
+      input: {
+        // 讓 SPA 路由刷新時不 404（GitHub Pages 必需）
+        main: resolve(__dirname, 'index.html'),
+        404: resolve(__dirname, 'index.html'),
+      },
+    },
+  },
+});
