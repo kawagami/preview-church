@@ -2,7 +2,7 @@ export default function Home() {
     return (
         <div className="w-full p-8 flex flex-col items-center">
             <header className="text-center mb-10">
-                <h1 className="text-4xl font-bold mb-2">教堂首頁</h1>
+                <h1 className="text-4xl font-bold mb-2">首頁</h1>
                 <p className="text-lg text-gray-600">
                     歡迎來到我們的教會
                 </p>
