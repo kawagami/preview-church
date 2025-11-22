@@ -16,6 +16,13 @@ export default function Home() {
                     </p>
                 </div>
 
+                <div className="rounded-2xl shadow p-6 bg-white">
+                    <h2 className="text-2xl font-semibold mb-3">聚會時間</h2>
+                    <ul className="text-gray-700 space-y-2">
+                        <li>查經班：每週四 晚上 6:30</li>
+                    </ul>
+                </div>
+
                 <div className="rounded-2xl shadow p-6 bg-white md:col-span-2">
                     <h2 className="text-2xl font-semibold mb-3">地點</h2>
                     <p className="text-gray-700 mb-4">我們位於台中的一處寧靜角落，歡迎親自來訪。</p>
