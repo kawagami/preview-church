@@ -1,4 +1,4 @@
-// src\app\Home\index.tsx (精緻化版本)
+// src\app\Home\index.tsx
 
 // 需要安裝一個 icon 庫，例如 react-icons，這裡暫時使用 Emoji 代替
 // import { Church, Clock, MapPin } from 'lucide-react'; 
