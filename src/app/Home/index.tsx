@@ -4,13 +4,9 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
     return (
-        // 外部容器不需要額外樣式，因為底層 App.tsx 已經處理了主要背景色
         <div className="w-full pb-16 pt-8 flex flex-col items-center">
 
-            {/* 標頭區塊 (Header) */}
             <header
-                // 淺色模式：bg-white, text-gray-900, text-gray-600
-                // 黑暗模式：dark:bg-gray-800, dark:text-white, dark:text-gray-300
                 className="text-center mb-16 px-6 py-12 
                            bg-white dark:bg-gray-800 
                            rounded-xl shadow-lg dark:shadow-2xl 
@@ -29,14 +25,9 @@ export default function Home() {
                 </p>
             </header>
 
-            {/* 內容卡片網格 (Grid Cards) */}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 w-full max-w-6xl">
 
-                {/* 卡片 1: 關於我們 */}
                 <div
-                    // 淺色模式：bg-white, text-gray-900, text-gray-700
-                    // 黑暗模式：dark:bg-gray-800, dark:text-white, dark:text-gray-400
-                    // 邊框：dark:border-gray-700
                     className="rounded-3xl shadow-xl hover:shadow-2xl 
                                transition-shadow duration-300 p-8 
                                bg-white dark:bg-gray-800 
@@ -53,7 +44,6 @@ export default function Home() {
                         我們是一個溫暖、友善且多元的社群，旨在為每一個人提供一個安全、接納的空間，一起成長，更加認識信仰的深度與美好。
                     </p>
                     <Link to="/about"
-                        // 連結顏色：dark:text-blue-400
                         className="mt-4 inline-block 
                                      text-blue-600 dark:text-blue-400 
                                      font-medium hover:text-blue-700 dark:hover:text-blue-300 
@@ -62,7 +52,6 @@ export default function Home() {
                     </Link>
                 </div>
 
-                {/* 卡片 2: 聚會時間 */}
                 <div
                     className="rounded-3xl shadow-xl hover:shadow-2xl 
                                transition-shadow duration-300 p-8 
@@ -90,7 +79,6 @@ export default function Home() {
                     </ul>
                 </div>
 
-                {/* 卡片 3: 我們的地點 (地圖) */}
                 <div
                     className="rounded-3xl shadow-xl hover:shadow-2xl 
                                transition-shadow duration-300 p-8 
@@ -119,10 +107,7 @@ export default function Home() {
 
             </div>
 
-            {/* 呼籲行動區塊 (CTA Section) */}
             <section
-                // 淺色模式：bg-blue-600, text-white
-                // 黑暗模式：dark:bg-indigo-700, text-white (保持白色以獲得高對比度)
                 className="mt-20 max-w-5xl w-full text-center 
                            bg-blue-600 dark:bg-indigo-700 
                            text-white p-10 rounded-2xl shadow-2xl transition-colors duration-300"
@@ -132,7 +117,6 @@ export default function Home() {
                     無論您在哪裡，我們都熱切期待與您在愛中相交。
                 </p>
                 <button
-                    // 按鈕顏色：淺色模式 bg-white/text-blue-600，黑暗模式 dark:bg-gray-100/dark:text-indigo-700
                     className="bg-white dark:bg-gray-100 
                                text-blue-600 dark:text-indigo-700 
                                font-semibold py-3 px-8 rounded-full shadow-lg 
