@@ -7,7 +7,6 @@ interface ButtonProps extends React.ComponentPropsWithoutRef<'button'> {
 }
 
 export default function ThemeToggleButton({ children, className = '', ...props }: ButtonProps) {
-    // 封裝所有通用樣式，只保留 className 作為覆蓋/擴展
     const baseStyles = `
     px-3 py-1 rounded-full text-sm font-medium transition-colors duration-300
     bg-blue-500 hover:bg-blue-600 text-white 
