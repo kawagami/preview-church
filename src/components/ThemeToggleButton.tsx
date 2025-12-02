@@ -11,7 +11,7 @@ export default function ThemeToggleButton({ children, className = '', ...props }
     px-3 py-1 rounded-full text-sm font-medium transition-colors duration-300
     bg-blue-500 hover:bg-blue-600 text-white 
     dark:bg-indigo-500 dark:hover:bg-indigo-600
-    ${className} // 讓外部可以傳入額外的類別
+    ${className}
   `;
 
     return (
