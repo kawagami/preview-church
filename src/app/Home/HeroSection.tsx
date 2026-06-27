@@ -6,8 +6,8 @@ export default function HeroSection() {
         <header
             className="text-center mb-16 px-6 py-12
                        bg-white dark:bg-gray-800
-                       rounded-xl shadow-lg dark:shadow-2xl
-                       max-w-4xl w-full border-t-4 border-blue-600
+                       rounded-2xl shadow-lg dark:shadow-2xl
+                       w-full border-t-4 border-blue-600 dark:border-indigo-500
                        transition-colors duration-300"
         >
             <h1

@@ -1,5 +1,5 @@
 import { HOME_CONTENT } from '../../constants/content';
-import Card from './Card';
+import Card from '../../components/Card';
 
 export default function MeetingTimesCard() {
     const { icon, title, note, schedule } = HOME_CONTENT.meetingCard;

@@ -10,8 +10,10 @@ export default function NotFound() {
             </p>
             <Link
                 to="/"
-                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold
-                           py-3 px-8 rounded-full transition duration-200 transform hover:scale-105"
+                className="bg-blue-600 hover:bg-blue-700 dark:bg-indigo-600 dark:hover:bg-indigo-700
+                           text-white font-semibold
+                           py-3 px-8 rounded-full transition duration-200 transform hover:scale-105
+                           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
             >
                 回到首頁
             </Link>

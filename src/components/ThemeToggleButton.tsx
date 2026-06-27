@@ -9,8 +9,11 @@ interface ButtonProps extends React.ComponentPropsWithoutRef<'button'> {
 export default function ThemeToggleButton({ children, className = '', ...props }: ButtonProps) {
     const baseStyles = `
     px-3 py-1 rounded-full text-sm font-medium transition-colors duration-300
-    bg-blue-500 hover:bg-blue-600 text-white 
+    bg-blue-500 hover:bg-blue-600 text-white
     dark:bg-indigo-500 dark:hover:bg-indigo-600
+    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2
+    focus-visible:ring-blue-500 dark:focus-visible:ring-indigo-400
+    dark:focus-visible:ring-offset-gray-800
     ${className}
   `;
 

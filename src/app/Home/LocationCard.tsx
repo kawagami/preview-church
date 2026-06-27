@@ -1,5 +1,5 @@
 import { HOME_CONTENT } from '../../constants/content';
-import Card from './Card';
+import Card from '../../components/Card';
 
 export default function LocationCard() {
     const { icon, title, body, mapSrc } = HOME_CONTENT.locationCard;
@@ -9,6 +9,7 @@ export default function LocationCard() {
             <div className="w-full h-64 rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700">
                 <iframe
                     className="w-full h-full"
+                    title={`${title}地圖`}
                     loading="lazy"
                     src={mapSrc}
                     allowFullScreen

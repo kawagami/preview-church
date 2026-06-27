@@ -15,9 +15,9 @@ export default function App() {
       <nav className="bg-white dark:bg-gray-800 shadow dark:shadow-md p-4 transition-colors duration-300">
         <div className="max-w-5xl mx-auto flex items-center gap-4">
 
-          <NavLink to="/">Home</NavLink>
+          <NavLink to="/">首頁</NavLink>
           <span className="text-gray-400">|</span>
-          <NavLink to="/about">About</NavLink>
+          <NavLink to="/about">關於我們</NavLink>
 
           <div className="flex-1"></div>
 
